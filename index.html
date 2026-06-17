@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutiger Aero IP Checker</title>
+    <title>Frutiger Aero IP Ban Checker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="main-container">
         <header>
             <h1>🌐 Frutiger Aero IP Ban Checker</h1>
-            <p class="subtitle">Check if your IP is banned in true Vista style!</p>
+            <p class="subtitle">Retro Vista Style • Glossy & Glassy</p>
         </header>
-        
+
         <div class="panel">
-            <button onclick="checkIP()" class="glossy-btn">🔍 Check My IP</button>
+            <button class="glossy-btn" onclick="checkIP()">🔍 Check My IP</button>
             <div id="result" class="result"></div>
         </div>
-        
-        <footer>
-            <p>Powered by nostalgia 💿</p>
-        </footer>
+
+        <!-- Admin Panel -->
+        <div class="admin-panel">
+            <h2>🔧 Admin Control Panel</h2>
+            <div class="admin-form">
+                <input type="text" id="ipInput" placeholder="Enter IP address (e.g. 46.97.176.167)" class="aero-input">
+                <button class="glossy-btn" onclick="banIP()">🚫 Ban IP</button>
+                <button class="glossy-btn" onclick="unbanIP()">✅ Unban IP</button>
+            </div>
+            <button class="glossy-btn refresh-btn" onclick="loadBannedList()">🔄 Refresh Banned List</button>
+            <h3>Banned IPs:</h3>
+            <ul id="bannedList" class="banned-list"></ul>
+            <p class="note">* Changes are client-side only in this static version. For persistence, consider a backend.</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
